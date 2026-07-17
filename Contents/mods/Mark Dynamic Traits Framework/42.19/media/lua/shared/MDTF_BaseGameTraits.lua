@@ -1,8 +1,8 @@
-if not getActivatedMods():contains("MarkDynamicTraits") then
+if not getActivatedMods():contains("MarkDynamicTraitsFramework") then
 	return
 end
 
-local MarkDynamicTraits = require "MDT_Main"
+local MarkDynamicTraits = require "MDTF_Main"
 
 local function registerBaseGameTraits()
 	MarkDynamicTraits.registerTrait(CharacterTrait.HERBALIST)

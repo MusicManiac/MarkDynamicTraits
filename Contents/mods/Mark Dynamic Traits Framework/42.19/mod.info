@@ -1,6 +1,6 @@
-name=Mark Dynamic Traits (MDT)
+name=Mark Dynamic Traits Framework (MDTF)
 poster=poster.png
-id=MarkDynamicTraits
+id=MarkDynamicTraitsFramework
 versionMin=42.19
 modversion=1.0.0
 icon=icon.png

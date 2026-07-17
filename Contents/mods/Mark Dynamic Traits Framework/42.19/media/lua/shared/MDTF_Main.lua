@@ -1,6 +1,6 @@
-MarkDynamicTraits = MarkDynamicTraits or {}
+MarkDynamicTraitsFramework = MarkDynamicTraitsFramework or {}
 ---@type table<string, boolean>
-MarkDynamicTraits.registeredTraits = MarkDynamicTraits.registeredTraits or {}
+MarkDynamicTraitsFramework.registeredTraits = MarkDynamicTraitsFramework.registeredTraits or {}
 
 local DYNAMIC_TRAIT_SUFFIX = " [~]"
 local traitNamesDecorated = false
@@ -41,38 +41,38 @@ end
 ---Returns the trait's translated UI name without the MDT suffix.
 ---@param trait CharacterTrait|CharacterTraitDefinition
 ---@return string|nil
-function MarkDynamicTraits.getUndecoratedUIName(trait)
+function MarkDynamicTraitsFramework.getUndecoratedUIName(trait)
 	return getUndecoratedName(trait, "getUIName")
 end
 
 ---Returns the trait's translated label without the MDT suffix.
 ---@param trait CharacterTrait|CharacterTraitDefinition
 ---@return string|nil
-function MarkDynamicTraits.getUndecoratedLabel(trait)
+function MarkDynamicTraitsFramework.getUndecoratedLabel(trait)
 	return getUndecoratedName(trait, "getLabel")
 end
 
 ---Registers a trait to have its displayed names marked as dynamic.
 ---@param characterTrait CharacterTrait
 ---@return boolean
-function MarkDynamicTraits.registerTrait(characterTrait)
+function MarkDynamicTraitsFramework.registerTrait(characterTrait)
 	if not characterTrait then
 		return false
 	end
 
-	MarkDynamicTraits.registeredTraits[characterTrait:getName()] = true
+	MarkDynamicTraitsFramework.registeredTraits[characterTrait:getName()] = true
 	return true
 end
 
 ---Returns whether the supplied trait definition is registered as dynamic.
 ---@param definition CharacterTraitDefinition
 ---@return boolean
-function MarkDynamicTraits.isRegistered(definition)
+function MarkDynamicTraitsFramework.isRegistered(definition)
 	if not definition then
 		return false
 	end
 
-	return MarkDynamicTraits.registeredTraits[definition:getType():getName()] == true
+	return MarkDynamicTraitsFramework.registeredTraits[definition:getType():getName()] == true
 end
 
 ---Wraps a trait-definition name method with MDT's conditional suffix behavior.
@@ -91,7 +91,7 @@ local function decorateMethod(methods, methodName)
 	---@return string
 	local function decoratedMethod(self)
 		local name = originalMethod(self)
-		if MarkDynamicTraits.isRegistered(self) then
+		if MarkDynamicTraitsFramework.isRegistered(self) then
 			return name .. DYNAMIC_TRAIT_SUFFIX
 		end
 
@@ -124,4 +124,4 @@ end
 Events.OnMainMenuEnter.Remove(decorateTraitNames)
 Events.OnMainMenuEnter.Add(decorateTraitNames)
 
-return MarkDynamicTraits
+return MarkDynamicTraitsFramework

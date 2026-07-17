@@ -1,10 +1,10 @@
-# EvolvingTraitsWorld
-Repo for PZ mod "Evolving Traits World"
+# Mark Dynamic Traits Framework (MDTF)
+Repo for PZ mod "Mark Dynamic Traits Framework"
 
-### [Changelog can be found here](https://github.com/MusicManiac/EvolvingTraitsWorld/blob/main/CHANGELOG.md)
+### [Changelog can be found here](https://github.com/MusicManiac/MarkDynamicTraitsFramework/blob/main/CHANGELOG.md)
 
 
-Mod page with detailed description along with permissions can be found here: [Evolving Traits World (ETW)](https://steamcommunity.com/sharedfiles/filedetails/?id=2914075159)
+Mod page with detailed description along with permissions can be found here: [Mark Dynamic Traits Framework (MDTF)](null)
 
 >⛔ Permissions
 >
