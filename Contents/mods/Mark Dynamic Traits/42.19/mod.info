@@ -1,0 +1,8 @@
+name=Mark Dynamic Traits (MDT)
+poster=poster.png
+id=MarkDynamicTraits
+versionMin=42.19
+modversion=1.0.0
+icon=icon.png
+description=Marks traits as dynamic in character creation so you can easily see which traits can be earned in-game.
+author=MusicManiac
