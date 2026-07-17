@@ -1,0 +1,49 @@
+[h1]If you're a user[/h1]
+Running some mod that makes traits dynamic? Don't know which traits can be earned/lost midgame? At character creation want to pick only static traits? Now achievable (assuming your favorite trait mod added support for this, which is very simple).
+
+[h1]Features[/h1]
+[list]
+[*] Marks dynamic traits with [~].
+[*] That's literally it.
+[/list]
+
+[h1]Supported Mods[/h1]
+[list]
+[*] Placeholder
+[/list]
+
+
+[h1]If you're a modder[/h1]
+Very simple to use. Use included .lua file that registers base game traits as guidance.
+One nuance that's not in the example file: if you for example do custom UI and you need to display trait names in there without suffix, there are 2 functions available for that so you don't have to bother with it, example use:
+[code]
+local MarkDynamicTraitsFramework
+if getActivatedMods():contains("MarkDynamicTraitsFramework") then
+	MarkDynamicTraitsFramework = require("MDTF_Main")
+else
+	return
+end
+
+local characterTrait = CharacterTrait.FIT
+local traitDefinition = CharacterTraitDefinition.getCharacterTraitDefinition(characterTrait )
+local undecoratedUIName = MarkDynamicTraitsFramework.getUndecoratedUIName(traitDefinition)
+local undecoratedUIName2 = MarkDynamicTraitsFramework.getUndecoratedUIName(characterTrait)
+local undecoratedLabel = MarkDynamicTraitsFramework.getUndecoratedLabel(traitDefinition)
+local undecoratedLabel2= MarkDynamicTraitsFramework.getUndecoratedLabel(characterTrait)
+[/code]
+Works both with CharacterTrait or CharacterTraitDefinition as you can see.
+
+[h1]GitHub and Discord[/h1]
+If you want to submit translation files, make suggestions or report bugs, the easiest way to do it would be on Discord.
+[url=https://discord.gg/8pBN5Ccm7z][img]https://cdn.iconscout.com/icon/free/png-256/discord-3691244-3073764.png[/img][/url][url=https://github.com/MusicManiac/MarkDynamicTraitsFramework][img]https://cdn.iconscout.com/icon/free/png-256/github-163-761603.png[/img][/url]
+
+[h1]Afterword and Permission[/h1]
+If you like this mod, check out collection on top of page for other mods I made or collaborated on! Rate ups are appreciated, and if you wanna send me a coffee, that's a real homie move, and you can do it here:
+[url=https://ko-fi.com/musicmaniac][img]https://uploads-ssl.webflow.com/5c14e387dab576fe667689cf/61e11d5cf697cee7ca5b65d9_Button-p-500.png[/img][/url]
+
+[quote]⛔ Permissions
+Redistribution of this mod without explicit permission from the creator is prohibited under any circumstances. This includes, but not limited to, uploading this mod to the Steam Workshop or any other site, distribution as part of another mod or modpack, distribution of modified versions.
+© 2026 [url=https://steamcommunity.com/profiles/76561198152820942]MusicManiac[/url] (SteamID64: 76561198152820942)[/quote]
+
+Workshop ID: 3766701843
+Mod ID: MarkDynamicTraitsFramework

@@ -4,7 +4,7 @@ Repo for PZ mod "Mark Dynamic Traits Framework"
 ### [Changelog can be found here](https://github.com/MusicManiac/MarkDynamicTraitsFramework/blob/main/CHANGELOG.md)
 
 
-Mod page with detailed description along with permissions can be found here: [Mark Dynamic Traits Framework (MDTF)](null)
+Mod page with detailed description along with permissions can be found here: [Mark Dynamic Traits Framework (MDTF)](https://steamcommunity.com/sharedfiles/filedetails/?id=3766701843)
 
 >⛔ Permissions
 >
