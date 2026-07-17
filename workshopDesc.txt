@@ -9,7 +9,7 @@ Running some mod that makes traits dynamic? Don't know which traits can be earne
 
 [h1]Supported Mods[/h1]
 [list]
-[*] Placeholder
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2914075159]Evolving Traits World (ETW)[/url]
 [/list]
 
 
